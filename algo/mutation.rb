@@ -3,7 +3,8 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+ tag = mutation.split("") - base_word.split("") 
+ tag.empty?
 end
 
 # Driver code - don't touch anything below this line.
@@ -11,7 +12,6 @@ puts "TESTING mutation?..."
 puts
 
 result = mutation?("burly", "ruby")
-
 puts "Your method returned:"
 puts result
 puts

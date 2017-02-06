@@ -31,4 +31,40 @@ end
 # The add_a_fridge method
 # The add_a_crib method
 # The add_a_custom_amenity method
+puts "Testing Hotel Reservation"
+
+reservation1 = HotelReservation.new(room_number:3, )
+
+puts "Testing room update"
+reservation1.room_number = 23
+if reservation1.room_number == 23
+  puts "Success!"
+else
+  puts "F"
+end
+
+puts "Amenities validation:"
+x = reservation1.add_a_fridge
+if x.include?("fridge")
+  puts "Success!"
+else
+  puts "F"
+end
+x = reservation1.add_a_crib
+if x.include?("crib")
+  puts "Success!"
+else
+  puts "F"
+end
+
+x = HotelReservation.new(amenities:"foot rub")
+ if x.include?("foot rub")
+  puts "Success!"
+else
+  puts "F"
+end
+
+
+
+
 

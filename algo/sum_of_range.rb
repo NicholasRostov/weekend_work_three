@@ -1,9 +1,13 @@
 # Complete the method called sum_of_range, which will accept an array containing
 # two numbers, and return the sum of all of the whole numbers within the range of those
 # numbers, inclusive.
-
 def sum_of_range(array)
-
+  z = 0
+  array = array.sort
+  (array[0]..array[1]).each do |x|
+    z += x
+  end
+  return z
 end
 
 # Driver code - don't touch anything below this line.
